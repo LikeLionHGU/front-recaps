@@ -5,18 +5,22 @@ import "../css/month.css";
 import "../css/footer.css";
 import "../css/container.css";
 import "../css/goal.css";
+//화면 전환을 위한 reat-router-dom {Link}요소 사용
+import { Link } from "react-router-dom";
 
 function Title() {
   return (
     <nav className="header">
       <div className="header__emty"></div>
       <div className="header__logo">
-        <a href="#">📖Reflect dairy</a>
+        <a href="#">Reflect dairy</a>
       </div>
 
       <ul className="header__menu">
         <li>
-          <a href="">New Post</a>
+          {/*<a href="">New Post</a>*/}
+          {/*Link를 통해서 Write 페이지로 이동*/}
+          <Link to={"/write"}>New Post</Link>
         </li>
       </ul>
 
@@ -69,10 +73,10 @@ function Footer() {
 
       <div id="likelionAddress-footer">
         <p>
-          <span>(주)멋쟁이사자처럼</span>|<span>한동대학교</span>|
+          <span>(二)硫댁ъ泥</span>|<span>援</span>|
           <span>Front-End</span>
         </p>
-        <p>경상북도 포항시 북구 흥해읍 한동로 558</p>
+        <p>寃쎌遺 ы� 遺援 ν댁 濡 558</p>
       </div>
     </div>
   );
