@@ -5,7 +5,6 @@ import "../css/month.css";
 import "../css/footer.css";
 import "../css/container.css";
 import "../css/goal.css";
-//화면 전환을 위한 reat-router-dom {Link}요소 사용
 import { Link } from "react-router-dom";
 
 function Title() {
@@ -13,14 +12,18 @@ function Title() {
     <nav className="header">
       <div className="header__emty"></div>
       <div className="header__logo">
-        <a href="#">Reflect dairy</a>
+        <a href="#">📖Reflect dairy</a>
       </div>
 
       <ul className="header__menu">
         <li>
           {/*<a href="">New Post</a>*/}
+
+          {/*Link�� ���ؼ� Write �������� �̵�*/}
+
           {/*Link를 통해서 Write 페이지로 이동*/}
-          <Link to={"/write"}>New Post</Link>
+
+          <Link to={"/write"}>📝New Post</Link>
         </li>
       </ul>
 
@@ -32,8 +35,8 @@ function Title() {
 }
 function Goal() {
   return (
-    <div class="goal__container">
-      <div class="goal">
+    <div className="goal__container">
+      <div className="goal">
         This Year's Goal: Eat well,play well, and develop well!
       </div>
     </div>
@@ -42,20 +45,10 @@ function Goal() {
 
 function Month() {
   return (
-    <div class="members">
-      <div class="member-card template">
-        <div class="card-banner">
+    <div className="members">
+      <div className="member-card template">
+        <div className="card-banner">
           <img src="#" alt="card-banner" />
-        </div>
-        <div class="member-info">
-          <div class="info-left">
-            <div class="info-name"></div>
-            <div class="info-link"></div>
-          </div>
-          <div class="info-github"></div>
-          <div class="info-introduce">
-            <p></p>
-          </div>
         </div>
       </div>
     </div>
@@ -64,7 +57,7 @@ function Month() {
 
 function Footer() {
   return (
-    <div class="footer">
+    <div className="footer">
       <img
         id="likelionLogo-footer"
         src="https://i.ibb.co/QfYWJV0/frontend-recpas.jpg"
@@ -73,10 +66,10 @@ function Footer() {
 
       <div id="likelionAddress-footer">
         <p>
-          <span>(二)硫댁ъ泥</span>|<span>援</span>|
+          <span>(주)멋쟁이사자처럼</span>|<span>한동대학교</span>|
           <span>Front-End</span>
         </p>
-        <p>寃쎌遺 ы� 遺援 ν댁 濡 558</p>
+        <p>경상북도 포항시 북구 흥해읍 한동로 558</p>
       </div>
     </div>
   );
@@ -85,10 +78,10 @@ function Footer() {
 function Header() {
   return (
     <body>
-      <div class="container">
+      <div className="container">
         <Title></Title>
         <Goal></Goal>
-        <div class="month-container">
+        <div className="month-container">
           <Month></Month>
           <Month></Month>
           <Month></Month>
