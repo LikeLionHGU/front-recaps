@@ -7,6 +7,7 @@ function App() {
   return (
     // ȭ�� ��ȯ�� �̷�������� react-router-dom�� ���
 
+    // 화면 전환이 이루어지도록 react-router-dom을 사용
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Header />}></Route>

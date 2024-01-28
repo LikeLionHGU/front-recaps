@@ -1,13 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-
 import "../css/header.css";
 import "../css/month.css";
 import "../css/footer.css";
 import "../css/container.css";
 import "../css/goal.css";
-
-//ȭ�� ��ȯ�� ���� reat-router-dom {Link}��� ���
 import { Link } from "react-router-dom";
 
 function Title() {
@@ -21,8 +18,12 @@ function Title() {
       <ul className="header__menu">
         <li>
           {/*<a href="">New Post</a>*/}
+
           {/*Link�� ���ؼ� Write �������� �̵�*/}
-          <Link to={"/write"}>New Post</Link>
+
+          {/*Link를 통해서 Write 페이지로 이동*/}
+
+          <Link to={"/write"}>📝New Post</Link>
         </li>
       </ul>
 
