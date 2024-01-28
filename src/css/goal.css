@@ -1,0 +1,11 @@
+.goal__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 107px;
+}
+
+.goal {
+  text-align: center;
+  font-size: 40px;
+}

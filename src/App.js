@@ -1,10 +1,12 @@
 import Header from "./component/Header";
+
+import "../src/css/header.css";
 import Write from "./component/Write";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    // È­¸é ÀüÈ¯ÀÌ ÀÌ·ç¾îÁöµµ·Ï react-router-domÀ» »ç¿ë
+    // í™”ë©´ ì „í™˜ì´ ì´ë£¨ì–´ì§€ë„ë¡ react-router-domì„ ì‚¬ìš©
 
     <BrowserRouter>
       <Routes>
