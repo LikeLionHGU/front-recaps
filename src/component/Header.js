@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+//화면 전환을 위한 reat-router-dom {Link}요소 사용
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -11,7 +13,9 @@ function Header() {
 
       <ul className="header__menu">
         <li>
-          <a href="">New Post</a>
+          {/*<a href="">New Post</a>*/}
+          {/*Link를 통해서 Write 페이지로 이동*/}
+          <Link to={"/write"}>New Post</Link>
         </li>
       </ul>
 
