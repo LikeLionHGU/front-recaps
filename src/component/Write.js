@@ -3,7 +3,54 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { json, useNavigate } from "react-router-dom";
 import "../css-write/form.css";
+import "../css-write/header_Write.css";
+import Footer from "../Footer";
+
 import { Link } from "react-router-dom";
+
+//Paige 구성을 위한 Components
+function Header_Write() {
+  return (
+    <div className="header_Write">
+      {/*Header(Main)화면으로 이동하기*/}
+
+      <span className="Header_Main">
+        <Link to={"/"}>
+          <span id="homebtn">Home</span>
+        </Link>
+      </span>
+
+      <span className="List">
+        <Link to={""}>
+          {/*예지 List 추가 */}
+          <span id="listbtn">List</span>
+        </Link>
+      </span>
+
+      <div className="title-header">Write your dairy</div>
+    </div>
+  );
+}
+
+//Header부분과 내용이 겹쳐요
+// function Footer_Write() {
+//   return (
+//     <div className="footer_Write">
+//       <img
+//         id="likelionLogo-footer"
+//         src="https://i.ibb.co/QfYWJV0/frontend-recpas.jpg"
+//       />
+//       <span id="title-footer">LikeLion Frontend</span>
+
+//       <div id="likelionAddress-footer">
+//         <p>
+//           <span>(주)멋쟁이사자처럼</span>|<span>한동대학교</span>|
+//           <span>Front-End</span>
+//         </p>
+//       </div>
+//     </div>
+//   );
+// }
 
 function Write() {
   //const navigate = useNavigate();
@@ -29,18 +76,12 @@ function Write() {
   //   };
 
   return (
-    <html>
-      <nav>
-        {" "}
-        <Link to={"/"}>
-          <h3 className="homebtn">Home</h3>
-        </Link>
-        <div className="title-header">Write your dairy</div>
-      </nav>
-      <hr />
-
-      <div className="recap-form">
-        <div>
+    <div className="html">
+      {/* HTML 태그 수정 */}
+      <div className="container-Write">
+        <Header_Write />
+        <hr />
+        <div className="recap-form">
           <div
             className="title" // 글의 제목
           >
@@ -51,7 +92,6 @@ function Write() {
             ></input>
           </div>
           <hr />
-
           <div
             className="owner_name" //작성자 이름
           >
@@ -62,7 +102,6 @@ function Write() {
               onChange={(e) => setName(e.target.value)}
             ></input>
           </div>
-
           <div
             className="date" //작성자 날짜
           >
@@ -73,7 +112,6 @@ function Write() {
               onChange={(e) => setDate(e.target.value)}
             ></input>
           </div>
-
           <div
             className="owner_password" //사용자 비밀번호
           >
@@ -166,10 +204,14 @@ function Write() {
             >
               만들기
             </button>
-          </div>
-        </div>
+          </div>{" "}
+          {/*button <div>tag*/}
+        </div>{" "}
+        {/*recap-form <div> tag*/}
+        <hr />
+        <Footer /> {/*container-Write <div> tag*/}
       </div>
-    </html>
+    </div>
   );
 }
 
