@@ -15,14 +15,14 @@ function Title() {
     <nav className="header">
       <div className="header__emty"></div>
       <div className="header__logo">
-        <a href="#">Reflect dairy</a>
+        <a href="#">📖Reflect dairy</a>
       </div>
 
       <ul className="header__menu">
         <li>
           {/*<a href="">New Post</a>*/}
           {/*Link를 통해서 Write 페이지로 이동*/}
-          <Link to={"/write"}>New Post</Link>
+          <Link to={"/write"}>📝New Post</Link>
         </li>
       </ul>
 
