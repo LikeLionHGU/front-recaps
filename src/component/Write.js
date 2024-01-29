@@ -27,7 +27,7 @@ function Header_Write() {
         </Link>
       </span>
 
-      <div className="title-header">Write your dairy</div>
+      <div className="title-header">Write your diary</div>
     </div>
   );
 }
