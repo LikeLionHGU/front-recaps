@@ -1,5 +1,7 @@
 // 예지
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import React from "react";
 import "../css/list.css";
 import Block from "./Block";
 import Month from "./Month";
