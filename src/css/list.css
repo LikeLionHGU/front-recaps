@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black;
 }
 .month h1 {
   font-size: 8vh;
