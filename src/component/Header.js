@@ -5,6 +5,7 @@ import "../css/footer.css";
 import "../css/container.css";
 import "../css/goal.css";
 import Footer from "../Footer";
+import "./Month.js";
 
 //화면 전환을 위한 reat-router-dom {Link}요소 사용
 import { Link } from "react-router-dom";
@@ -59,7 +60,7 @@ function Month(month) {
   console.log(month);
   return (
     <div className="several-month">
-      <Link to={"/list/"}>
+      <Link to={"/list/" + month.month}>
         <div
           className="month-card"
           style={{ background: monthcolor[month.month - 1] }}
