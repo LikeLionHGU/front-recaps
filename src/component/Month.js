@@ -21,19 +21,26 @@ export default function Month() {
       setMonth(1);
     }
   };
+  let num = month - 1;
+  if ((num = 1)) {
+    num = 12;
+  }
+  let num1 = month + 1;
+  if ((num = 12)) {
+    num = 1;
+  }
 
   return (
     <div className="month">
-      {/* <Link to={"/list/" + { decreaseMonth }}> */}
-      <button onClick={decreaseMonth}>
-        <Link to={"/list/" + (month - 1)}>prev</Link>
-        <Detail month={month}></Detail>
-      </button>
-      {/* </Link> */}
+
+      <Link to={"/list/" + num}>
+        <button onClick={decreaseMonth}>prev</button>
+      </Link>
       <h1>{month} 월</h1>
-      <button onClick={increaseMonth}>
-        <Link to={"/list/" + (month + 1)}>next</Link>
-      </button>
+      <Link to={"/list/" + num1}>
+        <button onClick={increaseMonth}>next</button>
+      </Link>
+
     </div>
   );
 }
