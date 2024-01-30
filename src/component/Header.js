@@ -42,30 +42,32 @@ function Goal() {
   );
 }
 
-function Month() {
+function Month(month) {
+  const monthcolor = [
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+  ];
+  console.log(month);
   return (
     <div className="several-month">
-      <div className="month-card">
-        <div className="month">1월</div>
-        {/*
-          
-              <div className="members">
-      <div className="member-card template">
-        <div className="card-banner">
-          
-          <img src="#" alt="card-banner" />*/}
-      </div>
-      <div className="member-info">
-        <div className="info-left">
-          <div className="info-name"></div>
-          <div className="info-link"></div>
+      <Link to={"/month/" + month.month}>
+        <div
+          className="month-card"
+          style={{ background: monthcolor[month.month - 1] }}
+        >
+          <div className="month">{month.month}월</div>
         </div>
-        <div className="info-github"></div>
-        <div className="info-introduce">
-          <p></p>
-        </div>
-      </div>
-      {/*  </div> */}
+      </Link>
     </div>
   );
 }
@@ -91,29 +93,22 @@ function Month() {
 // }
 
 function Header() {
+  const monthlist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+  console.log(monthlist);
   return (
-    <div className="body">
-      {/*<body></body> <html></html> 태그는 jsx에서 사용하면 cosole에서 오류가 출력되서 <div>로 수정했어요*/}
+    <body>
       <div className="container">
         <Title></Title>
         <Goal></Goal>
         <div className="month-container">
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
+          {monthlist.map((month) => (
+            <Month month={month} />
+          ))}
         </div>
         <Footer></Footer>
       </div>
-    </div>
+    </body>
   );
 }
 
