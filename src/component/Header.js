@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import "../css/header.css";
 import "../css/month.css";
 import "../css/footer.css";
