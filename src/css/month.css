@@ -8,18 +8,32 @@
 * {
   font-family: "Pretendard-Regular";
 }
+
+/*
 .members {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
 }
+*/
+
+/*새로 추간된 부분(시작)*/
+.several-month {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/*새로 추간된 부분(끝)*/
+
 .month-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
+/*
 .members .member-card {
   width: 250px;
   height: 250px;
@@ -171,7 +185,6 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
   }
-
   .modal_body {
     position: absolute;
     top: 50%;
@@ -194,3 +207,17 @@
     height: 320px;
   }
 }
+*/
+
+/*새로 추간된 부분(시작)*/
+.several-month .month-card {
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin: 16px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*새로 추간된 부분(끝)*/
