@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Detail from "./Detail";
 
 export default function Month() {
   const [month, setMonth] = useState(1);
 
-  const decreaseMonth = () => {
+  const decreaseMonth = (month) => {
     if (month > 1) {
       setMonth((prevMonth) => prevMonth - 1);
     } else {
       setMonth(12);
     }
+    return { month };
   };
 
   const increaseMonth = () => {
@@ -30,6 +32,7 @@ export default function Month() {
 
   return (
     <div className="month">
+
       <Link to={"/list/" + num}>
         <button onClick={decreaseMonth}>prev</button>
       </Link>
@@ -37,6 +40,7 @@ export default function Month() {
       <Link to={"/list/" + num1}>
         <button onClick={increaseMonth}>next</button>
       </Link>
+
     </div>
   );
 }
