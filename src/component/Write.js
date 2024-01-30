@@ -21,7 +21,7 @@ function Header_Write() {
       </span>
 
       <span className="List">
-        <Link to={""}>
+        <Link to={"/list"}>
           {/*예지 List 추가 */}
           <span id="listbtn">List</span>
         </Link>

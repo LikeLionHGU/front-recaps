@@ -15,8 +15,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Header />}></Route>
         <Route path="/write" element={<Write />}></Route>
+
         <Route path="list" element={<List />}></Route>
         {/* <Route path="/list/detail" element={<Detail />}></Route> */}
+
+        <Route path="/list" element={<List />}></Route>
+
       </Routes>
     </BrowserRouter>
 

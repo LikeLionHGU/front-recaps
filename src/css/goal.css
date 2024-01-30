@@ -1,11 +1,24 @@
+/*새로 추가된 부분*/
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital@0;1&display=swap");
+
 .goal__container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 107px;
+  /*새로 추간된 부분(시작)*/
+  border: 1px solid #8d9fee;
+  border-radius: 20px;
+  background-color: #8d9fee;
+  /*새로 추간된 부분(끝)*/
 }
 
 .goal {
+  /*새로 추간된 부분(시작)*/
+  font-family: "Dancing Script", cursive;
+  font-family: "Playfair Display", serif;
+  /*새로 추간된 부분(끝)*/
+
   text-align: center;
   font-size: 40px;
 }
