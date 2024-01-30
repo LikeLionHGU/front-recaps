@@ -44,22 +44,28 @@ function Goal() {
 
 function Month() {
   return (
-    <div className="members">
+    <div className="several-month">
+      <div className="month-card">
+        <div className="month">1월</div>
+        {/*
+          
+              <div className="members">
       <div className="member-card template">
         <div className="card-banner">
-          <img src="#" alt="card-banner" />
+          
+          <img src="#" alt="card-banner" />*/}
+      </div>
+      <div className="member-info">
+        <div className="info-left">
+          <div className="info-name"></div>
+          <div className="info-link"></div>
         </div>
-        <div className="member-info">
-          <div className="info-left">
-            <div className="info-name"></div>
-            <div className="info-link"></div>
-          </div>
-          <div className="info-github"></div>
-          <div className="info-introduce">
-            <p></p>
-          </div>
+        <div className="info-github"></div>
+        <div className="info-introduce">
+          <p></p>
         </div>
       </div>
+      {/*  </div> */}
     </div>
   );
 }
