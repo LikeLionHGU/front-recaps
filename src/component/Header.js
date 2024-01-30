@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import "../css/header.css";
 import "../css/month.css";
 import "../css/footer.css";
@@ -60,7 +59,7 @@ function Month(month) {
   console.log(month);
   return (
     <div className="several-month">
-      <Link to={"/month/" + month.month}>
+      <Link to={"/list/"}>
         <div
           className="month-card"
           style={{ background: monthcolor[month.month - 1] }}
