@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Month() {
   const [month, setMonth] = useState(1);
@@ -21,7 +22,9 @@ export default function Month() {
 
   return (
     <div className="month">
-      <button onClick={decreaseMonth}>prev</button>
+      <Link to={"/list/" + month}>
+        <button onClick={decreaseMonth}>prev</button>
+      </Link>
       <h1>{month} 월</h1>
       <button onClick={increaseMonth}>next</button>
     </div>

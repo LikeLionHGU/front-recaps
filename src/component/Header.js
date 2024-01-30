@@ -59,7 +59,7 @@ function Month(month) {
   console.log(month);
   return (
     <div className="several-month">
-      <Link to={"/month/" + month.month}>
+      <Link to={"/list/"}>
         <div
           className="month-card"
           style={{ background: monthcolor[month.month - 1] }}
