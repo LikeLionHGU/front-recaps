@@ -1,28 +1,25 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import Block from "./Block";
 
-function Detail() {
-  const { id } = useParams();
-  const [data] = useState(null);
+export default function Detail({ id }) {
+  const [recaps, setRecaps] = useState([]);
 
-  const getData = async () => {
-    try {
-      const response = await fetch(`=${id}`);
-      const data = await response.json();
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  function getRecap() {
+    fetch("https://ll-api.jungsub.com/recap/list")
+      .then((response) => response.json())
+      .then((data) => setRecaps(data));
+  }
+  console.log(recaps);
 
   useEffect(() => {
-    getData();
-  }, [id]);
+    getRecap();
+  }, []);
 
   return (
     <div>
-      <h1>{data.title}</h1>
-      <h3>{data.date}</h3>
-      <p>{data.body}</p>
+      {recaps.map((recaps) => (
+        <Block key={recaps.id} id={recaps._id} title={recaps.title} />
+      ))}
     </div>
   );
 }
