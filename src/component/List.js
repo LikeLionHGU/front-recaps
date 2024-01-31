@@ -14,10 +14,10 @@ function List() {
       <div className="num">
         <ListHeader></ListHeader>
         <Month></Month>
-        <Block week="1"></Block>
-        <Block week="2"></Block>
+        <Block></Block>
+        {/* <Block week="2"></Block>
         <Block week="3"></Block>
-        <Block week="4"></Block>
+        <Block week="4"></Block> */}
       </div>
     </div>
   );
