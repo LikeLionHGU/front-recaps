@@ -2,6 +2,13 @@ import { useState } from "react";
 import Modal from "react-modal";
 import Detail from "./Detail";
 
+function MonthCal({ date }) {
+  const month = date.slice(5, 7);
+
+  if (month === "01") return 1;
+  else if (month === "02") return 2;
+}
+
 export default function Content({ num, id, title, owner_name, date }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -17,6 +24,9 @@ export default function Content({ num, id, title, owner_name, date }) {
           {/* <span className="number">
               <h1># {num}</h1>
             </span> */}
+          {<MonthCal date={date} /> === 1 ? console.log(date) : null}
+          {/* if(
+          {<MonthCal date={date} /> === 1}) {console.log(date)} */}
           <span className="title">
             <h2>제목 : </h2>
             <h3>{title}</h3>

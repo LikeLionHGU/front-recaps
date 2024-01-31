@@ -1,5 +1,4 @@
 // 예지
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import React from "react";
 import "../css/list.css";
@@ -15,19 +14,13 @@ function List() {
       <div className="num">
         <ListHeader></ListHeader>
         <Month></Month>
-        <Block week="1"></Block>
-        <Block week="2"></Block>
+        <Block></Block>
+        {/* <Block week="2"></Block>
         <Block week="3"></Block>
-        <Block week="4"></Block>
+        <Block week="4"></Block> */}
       </div>
     </div>
   );
 }
-
-List.propTypes = {
-  _id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  owner_name: PropTypes.string.isRequired,
-};
 
 export default List;
