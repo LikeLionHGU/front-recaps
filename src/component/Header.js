@@ -99,7 +99,6 @@ function Header() {
             <Month month={month} />
           ))}
         </div>
-        <Footer></Footer>
       </div>
     </body>
   );
