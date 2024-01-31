@@ -1,7 +1,14 @@
 import { useState } from "react";
 import Content from "./Content";
 
-export default function WeekList({ id, week, title, owner_name, date }) {
+export default function WeekList({
+  id,
+  week,
+  title,
+  owner_name,
+  img_path,
+  date,
+}) {
   const [num, setNum] = useState(1);
 
   const increaseNum = () => {
@@ -18,12 +25,14 @@ export default function WeekList({ id, week, title, owner_name, date }) {
         title={title}
         owner_name={owner_name}
         date={date}
+        img_path={img_path}
       ></Content>
       <Content
         num={num}
         // id={id}
         title={title}
         owner_name={owner_name}
+        img_path={img_path}
       ></Content>
     </div>
   );

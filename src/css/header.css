@@ -1,24 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
 
-.header {
-  margin: 0;
+body {
+  background-color: rgb(255, 255, 255);
+  padding-top: 50px;
 }
 
 .header a {
   text-decoration: none;
-  color: #8d9fee;
+  /* color: #8d9fee; */
   font-family: "Gowun Dodum", sans-serif;
 }
 
 .header {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  width: 100%;
+  margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
-  padding: 20px 40px;
 }
 
 .header__logo {
+  color: white;
   font-size: 55px;
   text-align: center;
 }
@@ -71,4 +79,10 @@
   .header__toogleBtn {
     display: block;
   }
+}
+
+a:-webkit-any-link {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
 }

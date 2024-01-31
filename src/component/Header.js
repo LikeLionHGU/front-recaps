@@ -15,14 +15,14 @@ function Title() {
     <nav className="header">
       <div className="header__emty"></div>
       <div className="header__logo">
-        <a href="#">📖회고 제목입니다.</a>
+        <a href="#">Recaps</a>
       </div>
 
       <ul className="header__menu">
         <li>
           {/*<a href="">New Post</a>*/}
           {/*Link를 통해서 Write 페이지로 이동*/}
-          <Link to={"/write"}>📝새글쓰기</Link>
+          <Link to={"/write"}>📝새 글 쓰기</Link>
         </li>
       </ul>
 
@@ -35,7 +35,15 @@ function Title() {
 function Goal() {
   return (
     <div className="goal__container">
-      <div className="goal">올해의 목표: 잘 먹고, 잘 놀고, 잘 개발하기 !</div>
+      <span className="yeargoal">올해의 목표 : </span>
+      <div className="goalcov">
+        <div className="goal">
+          <ul className="goalcontent">
+            <li className="banner">잘 먹고, 잘 놀고, 잘 개발하기 !</li>
+            <li className="banner">잘 먹고, 잘 놀고, 잘 개발하기 !</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

@@ -19,27 +19,24 @@ export default function Block() {
     getRecap();
   }, []);
 
-  // const { title } = useParams();
-
   return (
     <div className="list">
       {recaps.map((element) => {
         return (
           <div key={element.id}>
-            {/* {element.title} {element.owner_name} {element.date} */}
             <Content
               id={element.id}
               title={element.title}
               owner_name={element.owner_name}
               date={element.date}
               body={element.body}
+              img_path={element.img_path}
             ></Content>
           </div>
         );
       })}
 
       <Item></Item>
-      {/* <WeekList week={week} title={title} owner_name={owner_name} date={date} /> */}
     </div>
   );
 }
@@ -49,4 +46,5 @@ Block.propTypes = {
   title: PropTypes.string.isRequired,
   owner_name: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
+  img_path: PropTypes.string.isRequired,
 };

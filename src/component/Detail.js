@@ -3,17 +3,6 @@ import PropTypes from "prop-types";
 import Block from "./Block";
 
 export default function Detail({ month }) {
-  // useEffect(() => {
-
-  // recaps.map((date) => {
-  //   if (date === month) {
-  //     console.log(date);
-  //   } else {
-  //   }
-  // });
-
-  // }, [recaps]);
-
   return <div></div>;
 }
 
