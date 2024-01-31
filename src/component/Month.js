@@ -4,7 +4,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 export default function Month() {
   const params = useParams();
   const navigate = useNavigate();
-  const [month, setMonth] = useState(params.month);
+  const [month, setMonth] = useState(Number(params.month));
 
   useEffect(() => {
     navigate(`/list/${month}`);
@@ -13,7 +13,7 @@ export default function Month() {
   const decreaseMonth = () => {
     let newMonth;
     if (month > 1) {
-      newMonth = month - 1;
+      newMonth = Number(month) - 1;
     } else {
       newMonth = 12;
     }
@@ -23,7 +23,7 @@ export default function Month() {
   const increaseMonth = () => {
     let newMonth;
     if (month < 12) {
-      newMonth = month + 1;
+      newMonth = Number(month) + 1;
     } else {
       newMonth = 1;
     }
