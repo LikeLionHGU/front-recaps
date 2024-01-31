@@ -1,9 +1,20 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-import Delete from "./Delete"; // delete함수 추가
+import { useLocation } from "react-router-dom";
 
-function Update({ id, title, owner_name, date, body, pass }) {
+//import Delete from "./Delete"; // delete함수 추가
+
+// 넘어와야할 데이터
+function Update() {
+  const location = useLocation();
+  const id = location.state.id;
+  const title = location.state.title;
+  const owner_name = location.state.owner_name;
+  const date = location.state.date;
+  const body = location.state.body;
+  const pass = location.state.pass;
+
   const [update_title, setTitle] = useState(title);
   const [update_body, setBody] = useState(body);
   const [update_name, setName] = useState(owner_name);
@@ -103,9 +114,7 @@ function Update({ id, title, owner_name, date, body, pass }) {
           업데이트
         </button>
 
-        <Delete id={id} pass={update_password}></Delete>
-
-        <></>
+        {/* <Delete id={id} pass={update_password}></Delete> */}
       </div>
     </div>
   );
