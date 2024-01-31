@@ -19,7 +19,7 @@ function Mainpage() {
 
   return (
     <div>
-      <Item>{recaps.map((recap) => console.log(recap.createdAt))}</Item>
+      <Item>{recaps.map((recap) => console.log(recap.date))}</Item>
     </div>
   );
 }
