@@ -1,4 +1,4 @@
-/*»õ·Î Ãß°¡µÈ ºÎºÐ*/
+/*ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ ï¿½Îºï¿½*/
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital@0;1&display=swap");
 
 .goal__container {
@@ -6,18 +6,17 @@
   align-items: center;
   justify-content: center;
   height: 107px;
-  /*»õ·Î Ãß°£µÈ ºÎºÐ(½ÃÀÛ)*/
+  /*ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ ï¿½Îºï¿½(ï¿½ï¿½ï¿½ï¿½)*/
   border: 1px solid #8d9fee;
   border-radius: 20px;
   background-color: #8d9fee;
-  /*»õ·Î Ãß°£µÈ ºÎºÐ(³¡)*/
+  /*ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ ï¿½Îºï¿½(ï¿½ï¿½)*/
 }
 
 .goal {
-  /*»õ·Î Ãß°£µÈ ºÎºÐ(½ÃÀÛ)*/
-  font-family: "Dancing Script", cursive;
-  font-family: "Playfair Display", serif;
-  /*»õ·Î Ãß°£µÈ ºÎºÐ(³¡)*/
+  /*ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ ï¿½Îºï¿½(ï¿½ï¿½ï¿½ï¿½)*/
+  font-family: "Gowun Dodum", sans-serif;
+  /*ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ ï¿½Îºï¿½(ï¿½ï¿½)*/
 
   text-align: center;
   font-size: 40px;
