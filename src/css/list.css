@@ -1,8 +1,9 @@
-.month {
+.num .month {
   display: flex;
   justify-content: center;
   align-items: center;
   color: black;
+  margin-top: 40px;
 }
 .month h1 {
   font-size: 8vh;
@@ -13,6 +14,7 @@
   height: 30px;
   margin-left: 80px;
   margin-right: 80px;
+  margin-top: 80px;
   border: none;
 }
 .month button:hover {

@@ -206,9 +206,14 @@ function Write() {
                       // navigate("/recap/" + json.ok._id);
                     }
                   });
+
+                alert("글이 등록되었습니다.");
               }}
             >
-              만들기
+              <Link to={"/"}>
+                만들기
+                <span className="home"></span>
+              </Link>
             </button>
           </div>{" "}
           {/*button <div>tag*/}
