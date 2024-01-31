@@ -25,12 +25,13 @@ export default function Block() {
         return (
           <div key={element.id}>
             <Content
-              id={element.id}
+              id={element._id}
               title={element.title}
               owner_name={element.owner_name}
               date={element.date}
               body={element.body}
               img_path={element.img_path}
+              pass={element.owner_pass}
             ></Content>
           </div>
         );

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
 
 export default function ListHeader() {
   return (
@@ -9,8 +8,6 @@ export default function ListHeader() {
           <h3>Home</h3>
         </div>
       </Link>
-
-      <Navbar></Navbar>
 
       <div className="write">
         <Link to={`/Write`}>

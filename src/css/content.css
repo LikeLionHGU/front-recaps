@@ -1,7 +1,9 @@
-.rect2 {
-  height: 100%;
+.rect3 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  height: 300px;
   max-height: 300px;
-  /* border: 1px solid black; */
+  /*border: 1px solid black;*/
+  width: 300px;
   margin-top: 7vh;
   margin-bottom: 3vh;
   margin-left: 4vh;
@@ -10,24 +12,22 @@
   padding-bottom: 3vh;
   border-radius: 20px;
 }
-.rect2:hover {
-  background-color: rgb(241, 241, 241);
+.rect3:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16), 0 10px 20px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
 }
 
-.rect2 .content {
-  height: 50px;
-  display: grid;
-  grid-template-columns: 60% 30% 10%;
+.rect3 .content {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-left: 6%;
   margin-right: 6%;
   text-align: center;
   border-radius: 20px;
   margin: 20px;
   align-items: center;
-}
-
-.content:hover {
-  background-color: rgba(171, 212, 227, 0.461);
 }
 
 .content h1,
@@ -39,16 +39,37 @@ h4 {
 
 .content .title {
   text-align: left;
-  padding-left: 2vh;
-  padding-right: 2vh;
+  margin-top: 15px;
 }
 
+.content .title h2,
+h3 {
+  font-weight: 900;
+}
 .writer {
   text-align: left;
-  padding-left: 2vh;
-  padding-right: 2vh;
+}
+.text-content {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
+.top-content {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid black;
+  padding-bottom: 15px;
+  font-size: 20px;
+}
+.top-content .date h4 {
+  font-weight: 500;
+}
+
+.header {
+  background-color: black;
+}
 a {
   text-decoration: none;
 }
