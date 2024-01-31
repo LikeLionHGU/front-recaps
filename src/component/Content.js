@@ -15,11 +15,6 @@ export default function Content({
   date,
   body,
   num,
-  id,
-  title,
-  owner_name,
-  date,
-  body,
   pass,
 }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
