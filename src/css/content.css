@@ -1,7 +1,9 @@
-.rect2 {
+.rect3 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   height: 100%;
   max-height: 300px;
-  /* border: 1px solid black; */
+  /*border: 1px solid black;*/
+  width: 300px;
   margin-top: 7vh;
   margin-bottom: 3vh;
   margin-left: 4vh;
@@ -10,24 +12,22 @@
   padding-bottom: 3vh;
   border-radius: 20px;
 }
-.rect2:hover {
+.rect3:hover {
   background-color: rgb(241, 241, 241);
+  cursor: pointer;
 }
 
-.rect2 .content {
-  height: 50px;
-  display: grid;
-  grid-template-columns: 60% 30% 10%;
+.rect3 .content {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-left: 6%;
   margin-right: 6%;
   text-align: center;
   border-radius: 20px;
   margin: 20px;
   align-items: center;
-}
-
-.content:hover {
-  background-color: rgba(171, 212, 227, 0.461);
 }
 
 .content h1,
