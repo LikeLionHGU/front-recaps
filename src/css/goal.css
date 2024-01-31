@@ -42,7 +42,8 @@ li {
 .goal {
   display: inline-block;
   height: 2.5em;
-  background-color: rgb(39, 68, 172);
+  border-radius: 20px;
+  background-color: rgb(133, 133, 133);
   color: white;
   vertical-align: top;
   overflow: hidden;
