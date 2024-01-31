@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
+import Delete from "./Delete"; // delete함수 추가
+
 function Update({ id, title, owner_name, date, body, pass }) {
   const [update_title, setTitle] = useState(title);
   const [update_body, setBody] = useState(body);
@@ -100,6 +102,10 @@ function Update({ id, title, owner_name, date, body, pass }) {
         >
           업데이트
         </button>
+
+        <Delete id={id} pass={update_password}></Delete>
+
+        <></>
       </div>
     </div>
   );
