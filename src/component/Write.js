@@ -3,7 +3,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { json, useNavigate } from "react-router-dom";
 import "../css-write/form.css";
-import "../css-write/header_Write.css";
+// import "../css-write/header_Write.css";
 import Footer from "../Footer";
 
 import { Link } from "react-router-dom";
@@ -14,11 +14,14 @@ function Header_Write() {
     <div className="header_Write">
       {/*Header(Main)화면으로 이동하기*/}
 
-      <span className="Header_Main">
-        <Link to={"/"}>
-          <span id="homebtn">Home</span>
-        </Link>
-      </span>
+      <div className="header">
+        <div className="btn">
+          <Link to={"/"}>
+            <span className="home">Home</span>
+          </Link>
+        </div>
+        <div className="header-title">Write your diary</div>
+      </div>
 
       <span className="List">
         <Link to={"/list/1"}>
@@ -26,8 +29,6 @@ function Header_Write() {
           <span id="listbtn">List</span>
         </Link>
       </span>
-
-      <div className="title-header">Write your diary</div>
     </div>
   );
 }
@@ -80,55 +81,60 @@ function Write() {
       {/* HTML 태그 수정 */}
       <div className="container-Write">
         <Header_Write />
-        <hr />
         <div className="recap-form">
+          <div className="contents">
+            <div
+              className="date" //작성자 날짜
+            >
+              <h4>날짜</h4>
+              <input
+                type="date"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+              ></input>
+            </div>
+            <div className="owner">
+              <span
+                className="owner_name" //작성자 이름
+              >
+                <h4>이름</h4>
+
+                <input
+                  placeholder="이름"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                ></input>
+              </span>
+              <span
+                className="owner_password" //사용자 비밀번호
+              >
+                <h4>비밀번호</h4>
+                <input
+                  type="password" //masking(효과)
+                  placeholder="비밀번호"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                ></input>
+              </span>
+            </div>
+          </div>
           <div
             className="title" // 글의 제목
           >
-            제목
-            <input
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-            ></input>
+            <h4>제목</h4>
+            <div className="title-form">
+              <input
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                placeholder="제목"
+              ></input>
+            </div>
           </div>
-          <hr />
-          <div
-            className="owner_name" //작성자 이름
-          >
-            이름
-            <input
-              placeholder="이름"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            ></input>
-          </div>
-          <div
-            className="date" //작성자 날짜
-          >
-            날짜
-            <input
-              type="date"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-            ></input>
-          </div>
-          <div
-            className="owner_password" //사용자 비밀번호
-          >
-            비밀번호
-            <input
-              type="password" //masking(효과)
-              placeholder="비밀번호"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            ></input>
-          </div>
-          <hr />
           <div
             className="body" //본문내용
           >
             <textarea
-              placeholder="본문작성"
+              placeholder="본문을 작성하세요"
               value={body}
               onChange={(e) => setBody(e.target.value)}
             ></textarea>
