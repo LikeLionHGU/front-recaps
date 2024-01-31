@@ -14,17 +14,13 @@ function Title() {
   return (
     <nav className="header">
       <div className="header__emty"></div>
-      <div className="header__logo">
+      <span className="header__logo">
         <a href="#">Recaps</a>
-      </div>
+      </span>
 
-      <ul className="header__menu">
-        <li>
-          {/*<a href="">New Post</a>*/}
-          {/*Link를 통해서 Write 페이지로 이동*/}
-          <Link to={"/write"}>📝새 글 쓰기</Link>
-        </li>
-      </ul>
+      <span className="header__menu">
+        <Link to={"/write"}>📝새 글 쓰기</Link>
+      </span>
 
       <a href="#" className="header__toogleBtn">
         <i className="fa-solid fa-bars"></i>

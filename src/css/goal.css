@@ -6,11 +6,8 @@
   align-items: center;
   justify-content: center;
   height: 107px;
-  /* border: 1px solid #8d9fee; */
-  /* border-radius: 18px; */
   left: 0;
   background-color: #ffffff;
-
   font-family: "Gowun Dodum", sans-serif;
   grid-template-columns: 30% 70%;
   text-align: center;
