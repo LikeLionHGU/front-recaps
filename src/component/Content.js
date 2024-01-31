@@ -2,6 +2,7 @@ import { useState } from "react";
 import Modal from "react-modal";
 import Detail from "./Detail";
 import { useParams } from "react-router-dom";
+import "../css/content.css";
 import Update from "./Update"; // update함수 추가
 
 function MonthCal({ date }) {}
@@ -23,22 +24,22 @@ export default function Content({
   if (Number(params.month) == Number(month)) {
     return (
       // <Link to={`/list/${id}`}>
-      <div>
+      <div className="list-container">
         <div className="rect3" onClick={() => setModalIsOpen(true)}>
           <div className="content">
             <MonthCal date={date} />
-            <span className="title">
+            <div className="title">
               <h2>제목 : </h2>
               <h3>{title}</h3>
-            </span>
-            <span className="writer">
+            </div>
+            <div className="writer">
               <h3>글쓴이 : </h3>
               <h4>{owner_name}</h4>
-            </span>
-            <span>
+            </div>
+            <div>
               <h4>작성 날짜 : </h4>
               <h4>{date}</h4>
-            </span>
+            </div>
           </div>
         </div>
         <div className="modal">
