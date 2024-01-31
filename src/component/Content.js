@@ -47,6 +47,7 @@ export default function Content({
             onRequestClose={() => setModalIsOpen(false)}
             id={id}
           >
+
             <Detail></Detail>
             <h1>{title}</h1>
             <h4>{owner_name}</h4>
@@ -70,6 +71,7 @@ export default function Content({
             </Link>
             <Delete id={id} pass={pass}></Delete>{" "}
             {/*삭제하기 기능은 구현 예정 아직 오류*/}
+
             <button onClick={() => setModalIsOpen(false)}>닫기</button>
           </Modal>
         </div>

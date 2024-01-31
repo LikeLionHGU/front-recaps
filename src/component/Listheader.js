@@ -8,7 +8,9 @@ export default function ListHeader() {
           <h3>Home</h3>
         </div>
       </Link>
-
+      <div className="header__logo">
+        <a href="#">Recaps</a>
+      </div>
       <div className="write">
         <Link to={`/Write`}>
           <h3>새 글 쓰기</h3>
