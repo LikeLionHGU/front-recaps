@@ -8,7 +8,6 @@ import Detail from "./component/Detail";
 import Item from "./component/pages/Item";
 import Mainpage from "./component/pages/Mainpage";
 import Block from "./component/Block";
-import Update from "./component/Update"; // update화면
 
 function App() {
   return (
@@ -28,7 +27,6 @@ function App() {
         <Route path="/list" element={<List />}></Route>
         <Route path="/:id" element={<Item />}></Route>
         <Route path="/list" element={<Block />}></Route>
-        <Route path="/update" element={<Update />}></Route>
       </Routes>
     </BrowserRouter>
 
