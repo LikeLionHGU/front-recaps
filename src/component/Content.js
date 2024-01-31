@@ -8,16 +8,11 @@ import Update from "./Update"; // update함수 추가
 function MonthCal({ date }) {}
 
 export default function Content({
-  id,
-  title,
-  owner_name,
-  img_path,
-  date,
-  body,
   num,
   id,
   title,
   owner_name,
+  img_path,
   date,
   body,
   pass,
