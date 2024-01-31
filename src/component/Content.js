@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import Detail from "./Detail";
 import { useParams, Link } from "react-router-dom";
 import "../css/content.css";
+//import Update from "./Update"; // update함수 추가
 import Delete from "./Delete"; // update함수 추가
 
 function MonthCal({ date }) {}
@@ -12,6 +13,7 @@ export default function Content({
   id,
   title,
   owner_name,
+  img_path,
   date,
   body,
   pass,
@@ -20,6 +22,7 @@ export default function Content({
   const params = useParams();
 
   const month = date.slice(5, 7);
+
   if (Number(params.month) == Number(month)) {
     return (
       // <Link to={`/list/${id}`}>
@@ -27,17 +30,19 @@ export default function Content({
         <div className="rect3" onClick={() => setModalIsOpen(true)}>
           <div className="content">
             <MonthCal date={date} />
+            <div className="top-content">
+              <span className="writer">
+                <h4>{owner_name}</h4>
+              </span>
+              <span className="date">
+                <h4>{date}</h4>
+              </span>
+            </div>
             <div className="title">
-              <h2>제목 : </h2>
-              <h3>{title}</h3>
+              <h2>제목 : {title} </h2>
             </div>
-            <div className="writer">
-              <h3>글쓴이 : </h3>
-              <h4>{owner_name}</h4>
-            </div>
-            <div>
-              <h4>작성 날짜 : </h4>
-              <h4>{date}</h4>
+            <div className="text-content">
+              <p>{body.length > 82 ? `${body.slice(0, 82)}... ` : body} </p>
             </div>
           </div>
         </div>
@@ -47,15 +52,24 @@ export default function Content({
             onRequestClose={() => setModalIsOpen(false)}
             id={id}
           >
-
-            <Detail></Detail>
+            {/* <Detail></Detail> */}
+            <div className="image">
+              <img src={"https://ll-api.jungsub.com" + img_path}></img>
+            </div>
             <h1>{title}</h1>
             <h4>{owner_name}</h4>
             <h5>{date}</h5>
             <p>{body}</p>
-            <h1>#작성한 글을 수정할 수 있습니다!</h1>
-            <strong>수정을 원하시면</strong>
-            <h3>{owner_name}님이 작성한 글 입니다.</h3>
+            {/* <Update
+              id={id}
+              title={title}
+              owner_name={owner_name}
+              date={date}
+              body={body}
+              pass={pass}
+            ></Update>
+            <button onClick={() => setModalIsOpen(false)}>닫기</button>
+         */}
             <Link
               to="/update"
               state={{
@@ -69,10 +83,9 @@ export default function Content({
             >
               <button>수정하기</button>
             </Link>
+            <button onClick={() => setModalIsOpen(false)}>닫기</button>
             <Delete id={id} pass={pass}></Delete>{" "}
             {/*삭제하기 기능은 구현 예정 아직 오류*/}
-
-            <button onClick={() => setModalIsOpen(false)}>닫기</button>
           </Modal>
         </div>
       </div>
