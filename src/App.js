@@ -6,6 +6,8 @@ import Month from "./component/Month";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Detail from "./component/Detail";
 import Item from "./component/pages/Item";
+import Mainpage from "./component/pages/Mainpage";
+import Block from "./component/Block";
 
 function App() {
   return (
@@ -17,13 +19,14 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Header />}></Route>
+        <Route path="/main" element={<Mainpage />}></Route>
         <Route path="/write" element={<Write />}></Route>
 
         <Route path="/list/:month" element={<List />}></Route>
         {/* <Route path="/list/detail" element={<Detail />}></Route> */}
         <Route path="/list" element={<List />}></Route>
-        <Route path="/list/:id" element={<Item />}></Route>
-
+        <Route path="/:id" element={<Item />}></Route>
+        <Route path="/list" element={<Block />}></Route>
       </Routes>
     </BrowserRouter>
 
