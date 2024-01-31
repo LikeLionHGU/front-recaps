@@ -2,10 +2,19 @@ import { useState } from "react";
 import Modal from "react-modal";
 import Detail from "./Detail";
 import { useParams } from "react-router-dom";
+import Update from "./Update"; // update함수 추가
 
 function MonthCal({ date }) {}
 
-export default function Content({ num, id, title, owner_name, date, body }) {
+export default function Content({
+  num,
+  id,
+  title,
+  owner_name,
+  date,
+  body,
+  pass,
+}) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const params = useParams();
 
@@ -43,6 +52,14 @@ export default function Content({ num, id, title, owner_name, date, body }) {
             <h4>{owner_name}</h4>
             <h5>{date}</h5>
             <p>{body}</p>
+            <Update
+              id={id}
+              title={title}
+              owner_name={owner_name}
+              date={date}
+              body={body}
+              pass={pass}
+            ></Update>
             <button onClick={() => setModalIsOpen(false)}>닫기</button>
           </Modal>
         </div>
