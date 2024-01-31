@@ -28,11 +28,12 @@ export default function Block() {
           <div key={element.id}>
             {/* {element.title} {element.owner_name} {element.date} */}
             <Content
-              id={element.id}
+              id={element._id}
               title={element.title}
               owner_name={element.owner_name}
               date={element.date}
               body={element.body}
+              pass={element.owner_pass}
             ></Content>
           </div>
         );
