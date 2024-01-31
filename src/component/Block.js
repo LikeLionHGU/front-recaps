@@ -26,12 +26,13 @@ export default function Block() {
       {recaps.map((element) => {
         return (
           <div key={element.id}>
-            {/* {element.title} {element.owner_name} {element.createdAt} */}
+            {/* {element.title} {element.owner_name} {element.date} */}
             <Content
               id={element.id}
               title={element.title}
               owner_name={element.owner_name}
-              date={element.createdAt}
+              date={element.date}
+              body={element.body}
             ></Content>
           </div>
         );
@@ -47,5 +48,5 @@ Block.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   owner_name: PropTypes.string.isRequired,
-  createdAt: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
 };

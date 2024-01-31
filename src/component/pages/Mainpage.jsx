@@ -7,7 +7,10 @@ function Mainpage() {
   function getRecap() {
     fetch("https://ll-api.jungsub.com/diary/list")
       .then((response) => response.json())
-      .then((data) => setRecaps(data));
+      .then((data) => {
+        setRecaps(data);
+        console.log("data", data);
+      });
   }
 
   useEffect(() => {
@@ -16,7 +19,7 @@ function Mainpage() {
 
   return (
     <div>
-      <Item></Item>
+      <Item>{recaps.map((recap) => console.log(recap.date))}</Item>
     </div>
   );
 }

@@ -19,6 +19,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Header />}></Route>
+        <Route path="/main" element={<Mainpage />}></Route>
         <Route path="/write" element={<Write />}></Route>
 
         <Route path="/list/:month" element={<List />}></Route>
