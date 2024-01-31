@@ -1,5 +1,5 @@
 // 예지
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import React from "react";
 import "../css/list.css";
 import Block from "./Block";
@@ -14,7 +14,7 @@ function List() {
       <div className="num">
         <ListHeader></ListHeader>
         <Month></Month>
-        <Block></Block>
+        <Block week="1"></Block>
         {/* <Block week="2"></Block>
         <Block week="3"></Block>
         <Block week="4"></Block> */}

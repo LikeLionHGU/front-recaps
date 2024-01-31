@@ -32,6 +32,7 @@ export default function Block() {
               title={element.title}
               owner_name={element.owner_name}
               date={element.createdAt}
+              body={element.body}
             ></Content>
           </div>
         );
