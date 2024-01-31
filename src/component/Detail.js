@@ -1,28 +1,32 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import PropTypes from "prop-types";
+import Block from "./Block";
 
-function Detail() {
-  const { id } = useParams();
-  const [data] = useState(null);
+export default function Detail({ month }) {
+  // useEffect(() => {
 
-  const getData = async () => {
-    try {
-      const response = await fetch(`=${id}`);
-      const data = await response.json();
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // recaps.map((date) => {
+  //   if (date === month) {
+  //     console.log(date);
+  //   } else {
+  //   }
+  // });
 
-  useEffect(() => {
-    getData();
-  }, [id]);
+  // }, [recaps]);
 
-  return (
-    <div>
-      <h1>{data.title}</h1>
-      <h3>{data.date}</h3>
-      <p>{data.body}</p>
-    </div>
-  );
+  return <div></div>;
 }
+
+Detail.propTypes = {
+  date: PropTypes.string.isRequired,
+  month: PropTypes.number.isRequired,
+};
+
+//
+// return (
+//   <div>
+//     {recaps.map((recaps) => (
+//       <Block key={recaps.id} id={recaps._id} title={recaps.title} />
+//     ))}
+//   </div>
+// );

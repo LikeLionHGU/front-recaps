@@ -1,11 +1,11 @@
 import React from "react";
-import styled from "styled-components";
 import "../css/header.css";
 import "../css/month.css";
 import "../css/footer.css";
 import "../css/container.css";
 import "../css/goal.css";
 import Footer from "../Footer";
+import "./Month.js";
 
 //화면 전환을 위한 reat-router-dom {Link}요소 사용
 import { Link } from "react-router-dom";
@@ -15,14 +15,14 @@ function Title() {
     <nav className="header">
       <div className="header__emty"></div>
       <div className="header__logo">
-        <a href="#">📖Reflect dairy</a>
+        <a href="#">📖회고 제목입니다.</a>
       </div>
 
       <ul className="header__menu">
         <li>
           {/*<a href="">New Post</a>*/}
           {/*Link를 통해서 Write 페이지로 이동*/}
-          <Link to={"/write"}>📝New Post</Link>
+          <Link to={"/write"}>📝새글쓰기</Link>
         </li>
       </ul>
 
@@ -35,31 +35,37 @@ function Title() {
 function Goal() {
   return (
     <div className="goal__container">
-      <div className="goal">
-        This Year's Goal: Eat well,play well, and develop well!
-      </div>
+      <div className="goal">올해의 목표: 잘 먹고, 잘 놀고, 잘 개발하기 !</div>
     </div>
   );
 }
 
-function Month() {
+function Month(month) {
+  const monthcolor = [
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+    "rgb(202, 235, 255)",
+  ];
+  console.log(month);
   return (
-    <div className="members">
-      <div className="member-card template">
-        <div className="card-banner">
-          <img src="#" alt="card-banner" />
+    <div className="several-month">
+      <Link to={"/list/" + month.month}>
+        <div
+          className="month-card"
+          style={{ background: monthcolor[month.month - 1] }}
+        >
+          <div className="month">{month.month}월</div>
         </div>
-        <div className="member-info">
-          <div className="info-left">
-            <div className="info-name"></div>
-            <div className="info-link"></div>
-          </div>
-          <div className="info-github"></div>
-          <div className="info-introduce">
-            <p></p>
-          </div>
-        </div>
-      </div>
+      </Link>
     </div>
   );
 }
@@ -85,29 +91,22 @@ function Month() {
 // }
 
 function Header() {
+  const monthlist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+  console.log(monthlist);
   return (
-    <div className="body">
-      {/*<body></body> <html></html> 태그는 jsx에서 사용하면 cosole에서 오류가 출력되서 <div>로 수정했어요*/}
+    <body>
       <div className="container">
         <Title></Title>
         <Goal></Goal>
         <div className="month-container">
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
-          <Month></Month>
+          {monthlist.map((month) => (
+            <Month month={month} />
+          ))}
         </div>
         <Footer></Footer>
       </div>
-    </div>
+    </body>
   );
 }
 
