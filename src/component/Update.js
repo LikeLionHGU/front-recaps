@@ -9,7 +9,7 @@ function Update({ id, title, owner_name, date, body, pass }) {
   const [update_date, setDate] = useState(date);
 
   return (
-    <div>
+    <div className="update-form">
       <div
         className="title" // 글의 제목
       >

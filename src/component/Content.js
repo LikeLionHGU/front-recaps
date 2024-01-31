@@ -49,10 +49,19 @@ export default function Content({
             id={id}
           >
             <Detail></Detail>
-            <h1>{title}</h1>
+            <button
+              onClick={() => setModalIsOpen(false)}
+              className="diary_home_btn"
+            >
+              뒤로가기
+            </button>
+            {/* # 수정할수 있음을 안내해주기 */}
+            <h1>{owner_name}님이 작성하신 글 입니다</h1>
+            <strong>수정을 위해서는 비밀번호를 입력해주세요</strong>
+            {/* <h1>{title}</h1>
             <h4>{owner_name}</h4>
             <h5>{date}</h5>
-            <p>{body}</p>
+            <p>{body}</p> */}
             <Update
               id={id}
               title={title}
@@ -61,7 +70,7 @@ export default function Content({
               body={body}
               pass={pass}
             ></Update>
-            <button onClick={() => setModalIsOpen(false)}>닫기</button>
+            {/* <button onClick={() => setModalIsOpen(false)}>닫기</button> */}
           </Modal>
         </div>
       </div>
