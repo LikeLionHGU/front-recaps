@@ -45,6 +45,7 @@ export default function Content({
             </div>
           </div>
         </div>
+        console.log({pass});
         <div className="modal">
           <Modal
             isOpen={modalIsOpen}
