@@ -12,6 +12,7 @@ export default function Content({
   id,
   title,
   owner_name,
+  img_path,
   date,
   body,
   pass,
@@ -50,7 +51,10 @@ export default function Content({
             onRequestClose={() => setModalIsOpen(false)}
             id={id}
           >
-            <Detail></Detail>
+            {/* <Detail></Detail> */}
+            <div className="image">
+              <img src={"https://ll-api.jungsub.com" + img_path}></img>
+            </div>
             <h1>{title}</h1>
             <h4>{owner_name}</h4>
             <h5>{date}</h5>
