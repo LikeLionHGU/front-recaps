@@ -49,20 +49,7 @@ function Goal() {
 }
 
 function Month(month) {
-  const monthcolor = [
-    "rgb(202, 235, 255)",
-    "rgb(202, 235, 255)",
-    "rgb(202, 235, 255)",
-    "rgb(202, 235, 255)",
-    "rgb(202, 235, 255)",
-    "rgb(202, 235, 255)",
-    "rgb(202, 235, 255)",
-    "rgb(202, 235, 255)",
-    "rgb(202, 235, 255)",
-    "rgb(202, 235, 255)",
-    "rgb(202, 235, 255)",
-    "rgb(202, 235, 255)",
-  ];
+  const monthcolor = [];
   console.log(month);
   return (
     <div className="several-month">

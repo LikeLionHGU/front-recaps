@@ -30,19 +30,19 @@
   height: 250px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   margin: 16px;
-  border-radius: 50px;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.month-card:hover {
+  background-color: rgb(216, 216, 216);
+}
+
 .month {
   font-size: 40px;
   color: white;
-}
-
-.month:hover {
-  background-color: blue;
 }
 
 a {
