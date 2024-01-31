@@ -5,19 +5,24 @@
   font-weight: 400;
   font-style: normal;
 }
+
 * {
   font-family: "Gowun Dodum", sans-serif;
 }
+
 .several-month {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
 }
+
 .month-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 70px;
 }
 
 .several-month .month-card {
@@ -34,6 +39,10 @@
 .month {
   font-size: 40px;
   color: white;
+}
+
+.month:hover {
+  background-color: blue;
 }
 
 a {

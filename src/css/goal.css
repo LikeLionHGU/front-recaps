@@ -6,18 +6,59 @@
   align-items: center;
   justify-content: center;
   height: 107px;
-  /*���� �߰��� �κ�(����)*/
-  border: 1px solid #8d9fee;
-  border-radius: 20px;
-  background-color: #8d9fee;
-  /*���� �߰��� �κ�(��)*/
+  /* border: 1px solid #8d9fee; */
+  /* border-radius: 18px; */
+  left: 0;
+  background-color: #ffffff;
+
+  font-family: "Gowun Dodum", sans-serif;
+  grid-template-columns: 30% 70%;
+  text-align: center;
+  font-size: 40px;
+  padding: 30px;
+}
+
+.yeargoal,
+.goalcontent {
+  padding: 10px;
+}
+
+/*롤링 배너*/
+li {
+  list-style: none;
+}
+
+.banner {
+  width: 80vh;
+  margin-right: 10px;
+}
+.goalcov {
+  width: 100vh;
+  height: 100%;
+  background-color: rgb(39, 29, 117, 0);
+  line-height: 2;
 }
 
 .goal {
-  /*���� �߰��� �κ�(����)*/
-  font-family: "Gowun Dodum", sans-serif;
-  /*���� �߰��� �κ�(��)*/
+  display: inline-block;
+  height: 2.5em;
+  background-color: rgb(39, 68, 172);
+  color: white;
+  vertical-align: top;
+  overflow: hidden;
+}
 
-  text-align: center;
-  font-size: 40px;
+.goalcontent {
+  animation-name: rolling;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rolling {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -2em;
+  }
 }

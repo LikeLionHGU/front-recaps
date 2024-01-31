@@ -12,6 +12,7 @@ export default function Content({
   id,
   title,
   owner_name,
+  img_path,
   date,
   body,
   pass,
@@ -28,17 +29,19 @@ export default function Content({
         <div className="rect3" onClick={() => setModalIsOpen(true)}>
           <div className="content">
             <MonthCal date={date} />
+            <div className="top-content">
+              <span className="writer">
+                <h4>{owner_name}</h4>
+              </span>
+              <span className="date">
+                <h4>{date}</h4>
+              </span>
+            </div>
             <div className="title">
-              <h2>제목 : </h2>
-              <h3>{title}</h3>
+              <h2>제목 : {title} </h2>
             </div>
-            <div className="writer">
-              <h3>글쓴이 : </h3>
-              <h4>{owner_name}</h4>
-            </div>
-            <div>
-              <h4>작성 날짜 : </h4>
-              <h4>{date}</h4>
+            <div className="text-content">
+              <p>{body.length > 82 ? `${body.slice(0, 82)}... ` : body} </p>
             </div>
           </div>
         </div>
@@ -48,7 +51,10 @@ export default function Content({
             onRequestClose={() => setModalIsOpen(false)}
             id={id}
           >
-            <Detail></Detail>
+            {/* <Detail></Detail> */}
+            <div className="image">
+              <img src={"https://ll-api.jungsub.com" + img_path}></img>
+            </div>
             <h1>{title}</h1>
             <h4>{owner_name}</h4>
             <h5>{date}</h5>
