@@ -4,8 +4,9 @@ import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
 import Item from "./pages/Item";
 import React from "react";
+import Content from "./Content";
 
-export default function Block({}) {
+export default function Block() {
   const [recaps, setRecaps] = useState([]);
 
   function getRecap() {
@@ -22,6 +23,20 @@ export default function Block({}) {
 
   return (
     <div className="list">
+      {recaps.map((element) => {
+        return (
+          <div key={element.id}>
+            {/* {element.title} {element.owner_name} {element.createdAt} */}
+            <Content
+              id={element.id}
+              title={element.title}
+              owner_name={element.owner_name}
+              date={element.createdAt}
+            ></Content>
+          </div>
+        );
+      })}
+
       <Item></Item>
       {/* <WeekList week={week} title={title} owner_name={owner_name} date={date} /> */}
     </div>
@@ -32,4 +47,5 @@ Block.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   owner_name: PropTypes.string.isRequired,
+  createdAt: PropTypes.string.isRequired,
 };
