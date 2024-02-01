@@ -1,19 +1,34 @@
 import React from "react";
 
+import { useState } from "react";
+import "../css-Delete/delete_style.css";
+
 function Delete({ id, pass }) {
+  const [password, setPassword] = useState("");
+  const Getpass = (e) => {
+    setPassword(e.target.value);
+  };
+
   return (
     <div className="bottom_delete">
+      <input
+        className="pass_input"
+        value={password}
+        onChange={Getpass}
+        placeholder="삭제를 위해 비밀번호를 입력해주세요."
+      />
+
       <button
         onClick={(e) => {
           // 데이터 넣어줄 DB API
 
-          console.log(id, pass);
+          console.log(id, password);
           const formData = new FormData();
 
-          formData.append("id", id);
-          formData.append("owner_pass", pass);
+          //formData.append("id", id);
+          formData.append("owner_pass", password);
 
-          fetch("https://ll-api.jungsub.com/diary/delete", {
+          fetch("https://ll-api.jungsub.com/diary/delete/" + id, {
             method: "post",
             body: formData,
           })
