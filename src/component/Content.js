@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Modal from "react-modal";
 import Detail from "./Detail";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "../css/content.css";
-import Update from "./Update"; // update함수 추가
+//import Update from "./Update"; // update함수 추가
+import Delete from "./Delete"; // update함수 추가
 
 function MonthCal({ date }) {}
 
@@ -45,7 +46,6 @@ export default function Content({
             </div>
           </div>
         </div>
-        console.log({pass});
         <div className="modal">
           <Modal
             isOpen={modalIsOpen}
@@ -53,18 +53,45 @@ export default function Content({
             id={id}
           >
             {/* <Detail></Detail> */}
-            <h1 className="modal-title">{title}</h1>
+            <div className="modal-title">
+              <h1>{title}</h1>
+            </div>
             <div className="name-date">
               <span>{owner_name}</span>
               <span>{date}</span>
             </div>
-            <p className="modal-content">{body}</p>
+            <div className="modal-content">
+              <p>{body}</p>
+            </div>
             <div className="image">
               <img src={"https://ll-api.jungsub.com" + img_path}></img>
             </div>
-            <button>삭제하기</button>
+            {/* <Update
+              id={id}
+              title={title}
+              owner_name={owner_name}
+              date={date}
+              body={body}
+              pass={pass}
+            ></Update>
             <button onClick={() => setModalIsOpen(false)}>닫기</button>
-            <button>수정하기</button>
+         */}
+            <Link
+              to="/update"
+              state={{
+                id: id,
+                title: title,
+                owner_name: owner_name,
+                date: date,
+                body: body,
+                pass: pass,
+              }}
+            >
+              <button>수정하기</button>
+            </Link>
+            <button onClick={() => setModalIsOpen(false)}>닫기</button>
+            <Delete id={id} pass={pass}></Delete>{" "}
+            {/*삭제하기 기능은 구현 예정 아직 오류*/}
           </Modal>
         </div>
       </div>
