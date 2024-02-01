@@ -117,7 +117,7 @@ function Update() {
               });
           }}
         >
-          업데이트
+          <Link to={"/"}>업데이트</Link>
         </button>
 
         {/* <Delete id={id} pass={update_password}></Delete> */}

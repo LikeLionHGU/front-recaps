@@ -8,6 +8,7 @@ import "./Month.js";
 
 //화면 전환을 위한 reat-router-dom {Link}요소 사용
 import { Link } from "react-router-dom";
+import Footer from "../Footer.js";
 
 function Title() {
   return (
@@ -99,6 +100,7 @@ function Header() {
             <Month month={month} />
           ))}
         </div>
+        <Footer></Footer>
       </div>
     </body>
   );
