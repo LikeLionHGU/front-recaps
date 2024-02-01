@@ -34,7 +34,7 @@ body {
   display: flex;
   font-size: 20px;
   list-style: none;
-  padding-right: 30px;
+  padding: 90px;
 }
 
 .header__menu li {

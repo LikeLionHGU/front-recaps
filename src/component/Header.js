@@ -13,7 +13,12 @@ import { Link } from "react-router-dom";
 function Title() {
   return (
     <nav className="header">
-      <div className="header__emty"></div>
+      <span className="header__menu">
+        <Link to={"/list/1"}>
+          {/*예지 List 추가 */}
+          <span id="listbtn">글 목록</span>
+        </Link>
+      </span>
       <span className="header__logo">
         <a href="#">Recaps</a>
       </span>
@@ -95,7 +100,6 @@ function Header() {
             <Month month={month} />
           ))}
         </div>
-        <Footer></Footer>
       </div>
     </body>
   );
