@@ -53,13 +53,19 @@ export default function Content({
             id={id}
           >
             {/* <Detail></Detail> */}
+            <div className="modal-title">
+              <h1>{title}</h1>
+            </div>
+            <div className="name-date">
+              <span>{owner_name}</span>
+              <span>{date}</span>
+            </div>
+            <div className="modal-content">
+              <p>{body}</p>
+            </div>
             <div className="image">
               <img src={"https://ll-api.jungsub.com" + img_path}></img>
             </div>
-            <h1>{title}</h1>
-            <h4>{owner_name}</h4>
-            <h5>{date}</h5>
-            <p>{body}</p>
             {/* <Update
               id={id}
               title={title}
