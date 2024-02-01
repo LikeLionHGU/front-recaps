@@ -40,8 +40,8 @@ function Goal() {
       <div className="goalcov">
         <div className="goal">
           <ul className="goalcontent">
-            <li className="banner">잘 먹고, 잘 놀고, 잘 개발하기 !</li>
-            <li className="banner">잘 먹고, 잘 놀고, 잘 개발하기 !</li>
+            <li className="banner">잘 놀고, 잘 먹고, 잘 개발하기 !</li>
+            <li className="banner">멋쟁이 으른 사자 되기</li>
           </ul>
         </div>
       </div>
