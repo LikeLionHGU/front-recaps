@@ -36,6 +36,17 @@
   align-items: center;
 }
 
+.m-btn button {
+  width: 130px !important;
+  height: 50px !important;
+  font-size: 20px !important;
+  border-radius: 10px;
+}
+
+.m-btn button:hover {
+  background-color: rgb(198, 198, 198) !important;
+}
+
 .month-card:hover {
   background-color: rgb(216, 216, 216);
 }

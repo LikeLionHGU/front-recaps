@@ -87,9 +87,13 @@ export default function Content({
                 pass: pass,
               }}
             >
-              <button>수정하기</button>
+              <div className="modal-btn">
+                <button>수정하기</button>
+              </div>
             </Link>
-            <button onClick={() => setModalIsOpen(false)}>닫기</button>
+            <div className="modal-btn">
+              <button onClick={() => setModalIsOpen(false)}>닫기</button>
+            </div>
             <Delete id={id} pass={pass}></Delete>{" "}
             {/*삭제하기 기능은 구현 예정 아직 오류*/}
           </Modal>
