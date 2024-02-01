@@ -118,6 +118,7 @@ function Update() {
           }}
         >
           <Link to={"/"}>업데이트</Link>
+          <span className="home"></span>
         </button>
 
         {/* <Delete id={id} pass={update_password}></Delete> */}
