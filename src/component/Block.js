@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 // import WeekList from "./Weeklist";
-import { useParams } from "react-router-dom";
 import Item from "./pages/Item";
 import React from "react";
 import Content from "./Content";

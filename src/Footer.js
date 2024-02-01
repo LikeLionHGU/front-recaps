@@ -17,6 +17,7 @@ function Footer() {
       <img
         id="likelionLogo-footer"
         src="https://i.ibb.co/PxJNskS/Likelion.jpg"
+        alt="img"
       />
       <span id="title-footer">LikeLion Frontend</span>
 

@@ -1,7 +1,6 @@
 // 한성
 import React from "react";
-import { useEffect, useState } from "react";
-import { json, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import "../css-write/form.css";
 // import "../css-write/header_Write.css";
 import Footer from "../Footer";
@@ -9,7 +8,7 @@ import Footer from "../Footer";
 import { Link } from "react-router-dom";
 
 //Paige 구성을 위한 Components
-function Header_Write() {
+function HeaderWrite() {
   return (
     <div className="header_Write">
       {/*Header(Main)화면으로 이동하기*/}
@@ -80,7 +79,7 @@ function Write() {
     <div className="html">
       {/* HTML 태그 수정 */}
       <div className="container-Write">
-        <Header_Write />
+        <HeaderWrite />
         <div className="recap-form">
           <div className="contents">
             <div

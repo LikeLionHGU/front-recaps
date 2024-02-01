@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Modal from "react-modal";
-import Detail from "./Detail";
 import { useParams, Link } from "react-router-dom";
 import "../css/content.css";
 //import Update from "./Update"; // update함수 추가
@@ -23,7 +22,7 @@ export default function Content({
 
   const month = date.slice(5, 7);
 
-  if (Number(params.month) == Number(month)) {
+  if (Number(params.month) === Number(month)) {
     return (
       // <Link to={`/list/${id}`}>
       <div className="list-container">
@@ -64,7 +63,10 @@ export default function Content({
               <p>{body}</p>
             </div>
             <div className="image">
-              <img src={"https://ll-api.jungsub.com" + img_path}></img>
+              <img
+                src={"https://ll-api.jungsub.com" + img_path}
+                alt="img"
+              ></img>
             </div>
             {/* <Update
               id={id}

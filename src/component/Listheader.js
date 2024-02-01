@@ -9,7 +9,7 @@ export default function ListHeader() {
         </div>
       </Link>
       <div className="header__logo">
-        <a href="#">Recaps</a>
+        <div>Recaps</div>
       </div>
       <div className="write">
         <Link to={`/Write`}>
