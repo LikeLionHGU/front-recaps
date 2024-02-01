@@ -35,7 +35,10 @@ body {
   display: flex;
   font-size: 20px;
   list-style: none;
+
   padding-right: 50px;
+
+  padding: 90px;
 }
 
 .header__menu li {

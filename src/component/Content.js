@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Modal from "react-modal";
 import Detail from "./Detail";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "../css/content.css";
-import Update from "./Update"; // update함수 추가
+//import Update from "./Update"; // update함수 추가
+import Delete from "./Delete"; // update함수 추가
 
 function MonthCal({ date }) {}
 
@@ -45,7 +46,6 @@ export default function Content({
             </div>
           </div>
         </div>
-        {/* console.log({pass}); */}
         <div className="modal">
           <Modal
             isOpen={modalIsOpen}
@@ -60,7 +60,7 @@ export default function Content({
             <h4>{owner_name}</h4>
             <h5>{date}</h5>
             <p>{body}</p>
-            <Update
+            {/* <Update
               id={id}
               title={title}
               owner_name={owner_name}
@@ -69,6 +69,23 @@ export default function Content({
               pass={pass}
             ></Update>
             <button onClick={() => setModalIsOpen(false)}>닫기</button>
+         */}
+            <Link
+              to="/update"
+              state={{
+                id: id,
+                title: title,
+                owner_name: owner_name,
+                date: date,
+                body: body,
+                pass: pass,
+              }}
+            >
+              <button>수정하기</button>
+            </Link>
+            <button onClick={() => setModalIsOpen(false)}>닫기</button>
+            <Delete id={id} pass={pass}></Delete>{" "}
+            {/*삭제하기 기능은 구현 예정 아직 오류*/}
           </Modal>
         </div>
       </div>
