@@ -25,6 +25,7 @@ body {
 }
 
 .header__logo {
+  height: 50px;
   color: white;
   font-size: 55px;
   text-align: center;
@@ -34,7 +35,7 @@ body {
   display: flex;
   font-size: 20px;
   list-style: none;
-  padding-right: 30px;
+  padding-right: 50px;
 }
 
 .header__menu li {
@@ -44,10 +45,6 @@ body {
 .header__menu li:hover {
   background-color: white;
   border-radius: 4px;
-}
-
-.header__menu li:hover a {
-  color: black;
 }
 
 .header__toogleBtn {
