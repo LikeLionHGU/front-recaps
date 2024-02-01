@@ -4,7 +4,6 @@ import "../css/month.css";
 import "../css/footer.css";
 import "../css/container.css";
 import "../css/goal.css";
-import Footer from "../Footer";
 import "./Month.js";
 
 //화면 전환을 위한 reat-router-dom {Link}요소 사용
@@ -20,16 +19,16 @@ function Title() {
         </Link>
       </span>
       <span className="header__logo">
-        <a href="#">Recaps</a>
+        <div>Recaps</div>
       </span>
 
       <span className="header__menu">
         <Link to={"/write"}>📝새 글 쓰기</Link>
       </span>
 
-      <a href="#" className="header__toogleBtn">
+      <div className="header__toogleBtn">
         <i className="fa-solid fa-bars"></i>
-      </a>
+      </div>
     </nav>
   );
 }
@@ -40,8 +39,8 @@ function Goal() {
       <div className="goalcov">
         <div className="goal">
           <ul className="goalcontent">
-            <li className="banner">잘 먹고, 잘 놀고, 잘 개발하기 !</li>
-            <li className="banner">잘 먹고, 잘 놀고, 잘 개발하기 !</li>
+            <li className="banner">잘 놀고, 잘 먹고, 잘 개발하기 !</li>
+            <li className="banner">멋쟁이 으른 사자 되기</li>
           </ul>
         </div>
       </div>

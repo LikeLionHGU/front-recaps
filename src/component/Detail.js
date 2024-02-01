@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import Block from "./Block";
 
 export default function Detail({ month }) {
   return <div></div>;

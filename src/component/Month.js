@@ -33,11 +33,15 @@ export default function Month() {
   return (
     <div className="month">
       <Link to={"/list/" + (Number(month) - 1)}>
-        <button onClick={decreaseMonth}>prev</button>
+        <div className="m-btn">
+          <button onClick={decreaseMonth}>prev</button>
+        </div>
       </Link>
       <h1>{month} 월</h1>
       <Link to={"/list/" + (Number(month) + 1)}>
-        <button onClick={increaseMonth}>next</button>
+        <div className="m-btn">
+          <button onClick={increaseMonth}>next</button>
+        </div>
       </Link>
     </div>
   );

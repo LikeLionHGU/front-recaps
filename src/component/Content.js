@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Modal from "react-modal";
-import Detail from "./Detail";
 import { useParams, Link } from "react-router-dom";
 import "../css/content.css";
 //import Update from "./Update"; // update함수 추가
@@ -23,7 +22,7 @@ export default function Content({
 
   const month = date.slice(5, 7);
 
-  if (Number(params.month) == Number(month)) {
+  if (Number(params.month) === Number(month)) {
     return (
       // <Link to={`/list/${id}`}>
       <div className="list-container">
@@ -53,13 +52,22 @@ export default function Content({
             id={id}
           >
             {/* <Detail></Detail> */}
-            <div className="image">
-              <img src={"https://ll-api.jungsub.com" + img_path}></img>
+            <div className="modal-title">
+              <h1>{title}</h1>
             </div>
-            <h1>{title}</h1>
-            <h4>{owner_name}</h4>
-            <h5>{date}</h5>
-            <p>{body}</p>
+            <div className="name-date">
+              <span>{owner_name}</span>
+              <span>{date}</span>
+            </div>
+            <div className="modal-content">
+              <p>{body}</p>
+            </div>
+            <div className="image">
+              <img
+                src={"https://ll-api.jungsub.com" + img_path}
+                alt="img"
+              ></img>
+            </div>
             {/* <Update
               id={id}
               title={title}
@@ -81,9 +89,13 @@ export default function Content({
                 pass: pass,
               }}
             >
-              <button>수정하기</button>
+              <div className="modal-btn">
+                <button>수정하기</button>
+              </div>
             </Link>
-            <button onClick={() => setModalIsOpen(false)}>닫기</button>
+            <div className="modal-btn">
+              <button onClick={() => setModalIsOpen(false)}>닫기</button>
+            </div>
             <Delete id={id} pass={pass}></Delete>{" "}
             {/*삭제하기 기능은 구현 예정 아직 오류*/}
           </Modal>
